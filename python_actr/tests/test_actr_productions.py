@@ -17,9 +17,11 @@ class UtilLearn(ACTR):
     c1=0
     c2=0
     def p1(self='x:1'):
+        print("a1")
         self.success()
         self.c1+=1
     def p2(self='x:1'):
+        print("a2")
         self.failure()
         self.c2+=1
 
@@ -28,6 +30,7 @@ class UtilSetting(ACTR):
     x=0
     def p1(self='x:0',utility=0.3):
         self.x=1
+        print("b1")
     def p2(self='x:0',utility=0.6):
         self.x=2
     
@@ -37,8 +40,10 @@ class UtilSetting(ACTR):
 class TestACTRProduction(unittest.TestCase):
     def test_basic(self):
         p=Basic()
+        print("c1")
 #        ccm.log_everything(p)
         p.run()
+        print("c2")
         self.assertEqual(p.x,2)
     
     def test_utillearn(self):

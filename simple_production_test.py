@@ -1,4 +1,5 @@
-from python_actr import *  
+import python_actr
+from python_actr import *
 
 
 class MyEnvironment(Model):
